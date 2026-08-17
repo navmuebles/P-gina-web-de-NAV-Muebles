@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 
 export default function FabricsPage() {
   return (
-    <main className="min-h-screen bg-[#F8F7F4]">
+    <main className="min-h-screen bg-black">
       <Navbar />
 
       <section className="mx-auto max-w-7xl px-6 pb-24 pt-32 lg:px-10">
@@ -13,7 +13,7 @@ export default function FabricsPage() {
         <div className="max-w-3xl">
           <Link
             href="/catalogo"
-            className="text-sm text-black/50 transition-colors hover:text-[#B8941F]"
+            className="text-sm text-white/50 transition-colors hover:text-[#B8941F]"
           >
             ← Volver al catálogo
           </Link>
@@ -22,11 +22,11 @@ export default function FabricsPage() {
             Personalización
           </p>
 
-          <h1 className="mt-3 text-5xl font-medium tracking-tight text-black sm:text-6xl">
+          <h1 className="mt-3 text-5xl font-medium tracking-tight text-white sm:text-6xl">
             Catálogo de telas
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-black/60 sm:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
             Explora nuestra selección de telas, referencias y colores
             disponibles para personalizar tus muebles.
           </p>
@@ -37,10 +37,10 @@ export default function FabricsPage() {
           {fabrics.map((fabric) => (
             <article
               key={fabric.id}
-              className="group overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group overflow-hidden rounded-3xl bg-[#111111] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               {/* Imagen */}
-              <div className="relative aspect-square overflow-hidden bg-[#EDE8E0]">
+              <div className="relative aspect-square overflow-hidden bg-[#181818]">
                 <Image
                   src={fabric.image}
                   alt={`${fabric.brand} ${fabric.reference} ${fabric.color}`}
@@ -55,11 +55,11 @@ export default function FabricsPage() {
                   {fabric.brand}
                 </p>
 
-                <h2 className="mt-2 text-xl font-medium text-black">
+                <h2 className="mt-2 text-xl font-medium text-white">
                   {fabric.reference}
                 </h2>
 
-                <p className="mt-1 text-sm text-black/50">
+                <p className="mt-1 text-sm text-white/50">
                   Color: {fabric.color}
                 </p>
               </div>
@@ -68,16 +68,16 @@ export default function FabricsPage() {
         </div>
 
         {/* Información inferior */}
-        <div className="mt-20 rounded-3xl border border-black/10 bg-white p-8 sm:p-10">
+        <div className="mt-20 rounded-3xl border border-white/10 bg-[#111111] p-8 sm:p-10">
           <p className="text-xs uppercase tracking-[0.25em] text-[#B8941F]">
             Personaliza tu mueble
           </p>
 
-          <h2 className="mt-3 text-2xl font-medium text-black sm:text-3xl">
+          <h2 className="mt-3 text-2xl font-medium text-white sm:text-3xl">
             ¿Encontraste la tela que buscas?
           </h2>
 
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-black/50 sm:text-base">
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-white/50 sm:text-base">
             Indícanos la referencia y el color de la tela que deseas junto con
             el nombre del mueble. Nuestro equipo podrá ayudarte con tu
             cotización personalizada.
@@ -87,7 +87,7 @@ export default function FabricsPage() {
             href="https://wa.me/573181093004"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-block rounded-full bg-black px-7 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-[#B8941F]"
+            className="mt-6 inline-block rounded-full bg-white px-7 py-3 text-sm font-medium text-black transition-all duration-300 hover:bg-[#B8941F] hover:text-white"
           >
             Solicitar cotización
           </a>

@@ -44,7 +44,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-        {/* Logo temporal */}
+        {/* Logo */}
         <Link href="/" className="shrink-0">
           <div className="flex items-center gap-2">
             <span className="text-3xl font-semibold tracking-widest text-white">
@@ -74,36 +74,43 @@ export default function Navbar() {
           </Link>
 
           {/* Colecciones */}
-          <div className="relative">
-            <button
-              onClick={() => setCollectionsOpen(!collectionsOpen)}
+          <div
+            className="relative"
+            onMouseEnter={() => setCollectionsOpen(true)}
+            onMouseLeave={() => setCollectionsOpen(false)}
+          >
+            <Link
+              href="/#colecciones"
               className="flex items-center gap-1 text-sm text-white transition-colors hover:text-[#D4AF37]"
             >
               Colecciones
+
               <span
                 className={`text-xs transition-transform ${
                   collectionsOpen ? "rotate-180" : ""
                 }`}
               >
-               ⌄
+                ⌄
               </span>
-            </button>
+            </Link>
 
+            {/* Menú desplegable */}
             {collectionsOpen && (
-              <div className="absolute left-1/2 top-full mt-4 w-72 -translate-x-1/2 rounded-2xl border border-white/10 bg-black/95 p-3 shadow-2xl backdrop-blur-md">
-                <div className="grid grid-cols-2 gap-1">
-                  {categories.map((category) => (
-                    <Link
-                      key={category}
-                      href={`/catalogo/${category
-                        .toLowerCase()
-                        .replaceAll(" ", "-")}`}
-                      onClick={() => setCollectionsOpen(false)}
-                      className="rounded-lg px-3 py-2 text-sm text-white/90 transition-colors hover:bg-white/10 hover:text-[#D4AF37]"
-                    >
-                      {category}
-                    </Link>
-                  ))}
+              <div className="absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-3">
+                <div className="rounded-2xl border border-white/10 bg-black/95 p-3 shadow-2xl backdrop-blur-md">
+                  <div className="grid grid-cols-2 gap-1">
+                    {categories.map((category) => (
+                      <Link
+                        key={category}
+                        href={`/catalogo/${category
+                          .toLowerCase()
+                          .replaceAll(" ", "-")}`}
+                        className="rounded-lg px-3 py-2 text-sm text-white/90 transition-colors hover:bg-white/10 hover:text-[#D4AF37]"
+                      >
+                        {category}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}

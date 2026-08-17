@@ -24,21 +24,16 @@ export default function ProductPage({ params }: Props) {
   );
 
   const [selectedFabricId, setSelectedFabricId] = useState(
-    productFabrics[0]?.id
-  );
-    const selectedFabric = productFabrics.find(
-      (fabric) => fabric.id === selectedFabricId
-  );
-
-
+  productFabrics[0]?.id
+);
   if (!product) {
     return (
-      <main className="min-h-screen bg-[#F8F7F4]">
+      <main className="min-h-screen bg-black">
         <Navbar />
 
         <section className="flex min-h-screen items-center justify-center px-6 pt-20">
           <div className="text-center">
-            <h1 className="text-4xl font-medium text-black">
+            <h1 className="text-4xl font-medium text-white">
               Producto no encontrado
             </h1>
 
@@ -53,30 +48,33 @@ export default function ProductPage({ params }: Props) {
       </main>
     );
   }
+  const selectedProductImage =
+    product.fabricImages?.[selectedFabricId ?? ""] ?? product.image;
 
   return (
-    <main className="min-h-screen bg-[#F8F7F4]">
+    <main className="min-h-screen bg-black">
       <Navbar />
 
       <section className="mx-auto max-w-7xl px-6 pb-24 pt-32 lg:px-10">
         <Link
           href={`/catalogo/${product.category}`}
-          className="text-sm text-black/50 transition-colors hover:text-[#B8941F]"
+          className="text-sm text-white/50 transition-colors hover:text-[#B8941F]"
         >
           ← Volver a {product.category.replaceAll("-", " ")}
         </Link>
 
-        <div className="mt-10 grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="mt-10 grid items-start gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
           {/* Imagen */}
-          <div className="relative aspect-square overflow-hidden rounded-3xl bg-white">
-            <Image
-              src={product.image}
-              alt={product.name}
-              fill
-              priority
-              className="object-contain p-6 transition-transform duration-700 hover:scale-105"
+          <div className="relative aspect-[1.08/1] overflow-hidden rounded-3xl bg-white">
+          <Image
+            src={selectedProductImage}
+            alt={product.name}
+            fill
+            priority
+            className="object-contain p-2 transition-transform duration-700 hover:scale-105"
             />
           </div>
+
 
           {/* Información */}
           <div>
@@ -84,23 +82,22 @@ export default function ProductPage({ params }: Props) {
               NAV Muebles
             </p>
 
-            <h1 className="mt-4 text-5xl font-medium tracking-tight text-black sm:text-6xl">
-              {product.name}
+            <h1 className="mt-4 text-4xl font-medium tracking-tight text-white sm:text-5xl">
+            {product.name}
             </h1>
-
-            <div className="mt-8 h-px w-full bg-black/10" />
-
-            <p className="mt-8 text-base leading-8 text-black/60 sm:text-lg">
-              {product.description}
+            <p className="mt-3 text-sm leading-6 text-white/55">
+            {product.description}
             </p>
+            <div className="mt-8 h-px w-full bg-white/15" />
 
+           
             {/* Personalización */}
             <FabricSelector
-              fabrics={fabrics.filter((fabric) =>
-                product.fabricIds?.includes(fabric.id)
-              )}
+              fabrics={productFabrics}
               productName={product.name}
               productId={product.id}
+              selectedFabricId={selectedFabricId}
+              onSelect={(fabric) => setSelectedFabricId(fabric.id)}
             />
             
           </div>

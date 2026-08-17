@@ -20,12 +20,12 @@ export default async function CategoryPage({ params }: Props) {
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 
   return (
-    <main className="min-h-screen bg-[#F8F7F4]">
+    <main className="min-h-screen bg-black">
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-36 lg:px-10">
         <div className="mb-12">
           <Link
             href="/catalogo"
-            className="text-sm text-black/50 transition-colors hover:text-[#B8941F]"
+            className="text-sm text-white/50 transition-colors hover:text-[#B8941F]"
           >
             ← Volver al catálogo
           </Link>
@@ -34,18 +34,18 @@ export default async function CategoryPage({ params }: Props) {
             Colección
           </p>
 
-          <h1 className="mt-3 text-5xl font-medium capitalize tracking-tight text-black sm:text-6xl">
+          <h1 className="mt-3 text-5xl font-medium capitalize tracking-tight text-white sm:text-6xl">
             {categoryName}
           </h1>
         </div>
 
         {categoryProducts.length === 0 ? (
-          <div className="rounded-3xl border border-black/10 bg-white p-12 text-center">
-            <h2 className="text-2xl font-medium text-black">
+          <div className="rounded-3xl border border-white/10 bg-[#111111] p-12 text-center">
+            <h2 className="text-2xl font-medium text-white">
               Próximamente
             </h2>
 
-            <p className="mx-auto mt-3 max-w-md text-black/50">
+            <p className="mx-auto mt-3 max-w-md text-white/50">
               Estamos preparando nuevos diseños para esta colección.
             </p>
           </div>
@@ -55,9 +55,9 @@ export default async function CategoryPage({ params }: Props) {
               <Link
                 key={product.id}
                 href={`/producto/${product.id}`}
-                className="group overflow-hidden rounded-3xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="group overflow-hidden rounded-3xl bg-[#111111] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#EDEAE5]">
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#181818]">
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -71,15 +71,15 @@ export default async function CategoryPage({ params }: Props) {
                     {categoryName}
                   </p>
 
-                  <h2 className="mt-2 text-2xl font-medium text-black">
+                  <h2 className="mt-2 text-2xl font-medium text-white">
                     {product.name}
                   </h2>
 
-                  <p className="mt-3 line-clamp-2 text-sm leading-6 text-black/50">
+                  <p className="mt-3 line-clamp-2 text-sm leading-6 text-white/50">
                     {product.description}
                   </p>
 
-                  <span className="mt-5 block text-sm font-medium text-black transition-colors group-hover:text-[#B8941F]">
+                  <span className="mt-5 block text-sm font-medium text-white transition-colors group-hover:text-[#B8941F]">
                     Ver producto →
                   </span>
                 </div>
