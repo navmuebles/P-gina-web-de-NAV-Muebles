@@ -131,4 +131,28 @@ export const products: Product[] = [
       }, 
 
     },
+    {
+      id: "sofa-novad",
+      name: "Sofá Novad",
+      category: "salas",
+      description:
+        "Sofá cama de diseño contemporáneo, pensado para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/PLATINUM HIELO.png",
+      featured: true,
+
+      fabricIds: [
+      "platinum-hielo",
+      "platinum-sand",
+      "velia-maifil",
+      "velia-mocca"
+      ],
+
+      fabricImages: {
+      "platinum-hielo": "/images/products/sofa-novad/PLATINUM%20HIELO.png",
+      "platinum-sand": "/images/products/sofa-novad/PLATINUM%20SAND.png",
+      "velia-maifil": "/images/products/sofa-novad/VELIA MAIFIL.png",
+      "velia-mocca": "/images/products/sofa-novad/VELIA MOCCA.png",
+      }, 
+
+    },
 ];

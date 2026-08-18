@@ -147,4 +147,32 @@ export const fabrics: Fabric[] = [
     color: "Plata",
     image: "/images/fabrics/pradera-plata.jpg",
   },
+  {
+    id: "platinum-hielo",
+    brand: "multiinsumos",
+    reference: "Platinum",
+    color: "Hielo",
+    image: "/images/fabrics/platinum-hielo.jpg",
+  },
+  {
+    id: "platinum-sand",
+    brand: "multiinsumos",
+    reference: "Platinum",
+    color: "SAND",
+    image: "/images/fabrics/platinum-sand.jpg",
+  },
+  {
+    id: "velia-maifil",
+    brand: "multiinsumos",
+    reference: "Velia",
+    color: "Maifil",
+    image: "/images/fabrics/velia-maifil.jpg",
+  },
+  {
+    id: "velia-mocca",
+    brand: "multiinsumos",
+    reference: "Velia",
+    color: "Mocca",
+    image: "/images/fabrics/velia-mocca.jpg",
+  },
 ];
