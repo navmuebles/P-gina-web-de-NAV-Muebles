@@ -7,7 +7,7 @@ const categories = [
   {
     name: "Base camas",
     slug: "base-camas",
-    image: "",
+    image: "/images/products/vista-catalogo-basecama.png",
   },
   {
     name: "Butacas",
@@ -27,7 +27,7 @@ const categories = [
   {
     name: "Comedores",
     slug: "comedores",
-    image: "",
+    image: "/images/products/vista-catalogo-comedor.png",
   },
   {
     name: "Escritorios",
@@ -42,7 +42,7 @@ const categories = [
   {
     name: "Poltronas",
     slug: "poltronas",
-    image: "",
+    image: "/images/products/vista-catalogo-poltrona.png",
   },
   {
     name: "Puffs",
@@ -60,14 +60,9 @@ const categories = [
     image: "",
   },
   {
-    name: "Taburetes",
-    slug: "taburetes",
-    image: "",
-  },
-  {
     name: "Categoría infantil",
     slug: "categoria-infantil",
-    image: "",
+    image: "/images/products/vista-catalogo-infantil.png",
   },
 ];
 
