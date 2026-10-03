@@ -7,6 +7,8 @@ import Navbar from "@/components/Navbar";
 import { products } from "@/data/products";
 import FabricSelector from "@/components/FabricSelector";
 import { fabrics } from "@/data/fabrics";
+import WoodSelector from "@/components/Woodselector";
+import { woods } from "@/data/woods";
 
 type Props = {
   params: Promise<{
@@ -22,10 +24,17 @@ export default function ProductPage({ params }: Props) {
   const productFabrics = fabrics.filter((fabric) =>
     product?.fabricIds?.includes(fabric.id)
   );
+  const productWoods = woods.filter((wood) =>
+    product?.woodIds?.includes(wood.id)
+  );
 
   const [selectedFabricId, setSelectedFabricId] = useState(
   productFabrics[0]?.id
-);
+  )
+  const [selectedWoodId, setSelectedWoodId] = useState(
+  productWoods[0]?.id
+  );
+  
   if (!product) {
     return (
       <main className="min-h-screen bg-black">
@@ -49,9 +58,11 @@ export default function ProductPage({ params }: Props) {
     );
   }
   const selectedProductImage =
-    product.fabricImages?.[selectedFabricId ?? ""] ?? product.image;
-
-  return (
+    product.woodImages?.[selectedWoodId ?? ""] ??
+    product.fabricImages?.[selectedFabricId ?? ""] ??
+    product.image;
+  
+    return (
     <main className="min-h-screen bg-black">
       <Navbar />
 
@@ -98,6 +109,13 @@ export default function ProductPage({ params }: Props) {
               productId={product.id}
               selectedFabricId={selectedFabricId}
               onSelect={(fabric) => setSelectedFabricId(fabric.id)}
+            />
+            <WoodSelector
+              woods={productWoods}
+              productName={product.name}
+              productId={product.id}
+              selectedWoodId={selectedWoodId}
+              onSelect={(wood) => setSelectedWoodId(wood.id)}
             />
             
           </div>

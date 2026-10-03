@@ -18,6 +18,7 @@ const categories = [
   "Taburetes",
   "Categoría infantil",
   "Telas",
+  "Maderas",
 ];
 
 export default function Navbar() {

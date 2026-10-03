@@ -7,12 +7,14 @@ export type Product = {
   featured?: boolean;
   fabricIds?: string[];
   fabricImages?: Record<string, string>;
+  woodIds?: string[];
+  woodImages?: Record<string, string>;
 };
 
 
 export const products: Product[] = [
   {
-    id: "sofa-prestige",
+    id: "-prestige",
     name: "Sofá Cama Prestige",
     category: "salas",
     description:
@@ -229,7 +231,7 @@ export const products: Product[] = [
     },
     {
       id: "sala-serenity",
-      name: "Sala Serenity",
+      name: "Sofá Cama serenity",
       category: "salas",
       description:
         "Sofá cama de diseño contemporáneo, pensado para brindar comodidad, funcionalidad y estilo a tus espacios.",
@@ -563,7 +565,7 @@ export const products: Product[] = [
     },
     {
       id: "sofa-imperial",
-      name: "Sofá Imperial",
+      name: "Sofá Cama Imperial",
       category: "salas",
       description:
         "Sofá cama de diseño contemporáneo, pensado para brindar comodidad, funcionalidad y estilo a tus espacios.",
@@ -653,4 +655,573 @@ export const products: Product[] = [
       "monetplus-indigo": "/images/products/cabecero-milano/MONET PLUS ÍNDIGO.jpg",
       },
     },  
+    {
+      id: "poltrona-michi",
+      name: "Poltrona Michi",
+      category: "poltronas",
+      description:
+        "Sofá cama de diseño contemporáneo, pensado para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/COLBAN MARFIL.jpg",
+      featured: true,
+
+      fabricIds: [
+      "colban-azul",
+      "colban-camel",
+      "colban-coral",
+      "colban-marfil",
+      ],
+
+      fabricImages: {
+      "colban-azul": "/images/products/poltrona-michi/PASCAL AZUL.jpg",
+      "colban-camel": "/images/products/poltrona-michi/COLBAN CAMEL.jpg",
+      "colban-coral": "/images/products/poltrona-michi/PASCAL CORAL.jpg",
+      "colban-marfil": "/images/products/poltrona-michi/COLBAN MARFIL.jpg",
+      },
+    },
+    {
+      id: "poltrona-giratoria",
+      name: "Poltrona Giratoria",
+      category: "poltronas",
+      description:
+        "Sofá cama de diseño contemporáneo, pensado para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/MONET PLUS BLANCO.jpg",
+      featured: true,
+
+      fabricIds: [
+      "colban-grafito",
+      "colban-negro",
+      "colban-plata",
+      "monetplus-blanco",
+      ],
+
+      fabricImages: {
+      "colban-grafito": "/images/products/poltrona-giratoria/COLBAN GRAFITO.jpg",
+      "colban-negro": "/images/products/poltrona-giratoria/COLBAN NEGRO.jpg",
+      "colban-plata": "/images/products/poltrona-giratoria/COLBAN PLATA.jpg",
+      "monetplus-blanco": "/images/products/poltrona-giratoria/MONET PLUS BLANCO.jpg",
+      },
+    },
+    {
+      id: "poltrona-lounge",
+      name: "Poltrona Lounge",
+      category: "poltronas",
+      description:
+        "Sofá cama de diseño contemporáneo, pensado para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/ABBY PLATA.jpg",
+      featured: true,
+
+      fabricIds: [
+      "abby-plata",
+      "abby-rosa",
+      "abby-sand",
+      "join22-azul",
+      ],
+
+      fabricImages: {
+      "abby-plata": "/images/products/poltrona-lounge/ABBY PLATA.jpg",
+      "abby-rosa": "/images/products/poltrona-lounge/ABBY ROSA.jpg",
+      "abby-sand": "/images/products/poltrona-lounge/ABBY SAND.jpg",
+      "join22-azul": "/images/products/poltrona-lounge/JOIN 22 AZUL.jpg",
+      },
+    },
+    {
+      id: "poltrona-rotondo",
+      name: "Poltrona Rotoondo",
+      category: "poltronas",
+      description:
+        "Sofá cama de diseño contemporáneo, pensado para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/ABBY CRUDO.jpg",
+      featured: true,
+
+      fabricIds: [
+      "abby-beige",
+      "abby-crudo",
+      "join17-nuvo",
+      "join47-taupe",
+      ],
+
+      fabricImages: {
+      "abby-beige": "/images/products/poltrona-rotondo/ABBY BEIGE.jpg",
+      "abby-crudo": "/images/products/poltrona-rotondo/ABBY CRUDO.jpg",
+      "join17-nuvo": "/images/products/poltrona-rotondo/JOIN 17 NUVO.jpg",
+      "join47-taupe": "/images/products/poltrona-rotondo/JOIN 47 TAUPE.jpg",
+      },
+    },
+    {
+      id: "cabecero-velvet",
+      name: "Cabecero Velvet",
+      category: "cabeceros",
+      description:
+        "Cabecero de diseño contemporáneo, pensado para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/JOIN 00 BLANCO.jpg",
+      featured: true,
+
+      fabricIds: [
+      "join00-blanco",
+      "join02-sand",
+      "join21-rosy",
+      "join52-carbon",
+      ],
+
+      fabricImages: {
+      "join00-blanco": "/images/products/cabecero-velvet/JOIN 00 BLANCO.jpg",
+      "join02-sand": "/images/products/cabecero-velvet/JOIN 02 SAND.jpg",
+      "join21-rosy": "/images/products/cabecero-velvet/JOIN 21 ROSY.jpg",
+      "join52-carbon": "/images/products/cabecero-velvet/JOIN 52 CARBóN.jpg",
+      },
+    },
+    {
+      id: "butaca-teddy",
+      name: "Butacas Teddy",
+      category: "butacas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/JOIN 10 GRIS.jpg",
+      featured: true,
+
+      fabricIds: [
+      "join10-gris",
+      "join12-grafito",
+      "metro-negro",
+      "metro-taupe",
+      ],
+
+      fabricImages: {
+      "join10-gris": "/images/products/butaca-teddy/JOIN 10 GRIS.jpg",
+      "join12-grafito": "/images/products/butaca-teddy/JOIN 12 GRAFITO.jpg",
+      "metro-negro": "/images/products/butaca-teddy/METRO NEGRO.jpg",
+      "metro-taupe": "/images/products/butaca-teddy/METRO TAUPE.jpg",
+      },
+    },
+    {
+      id: "comedor-nordic",
+      name: "Comedor Nordic",
+      category: "comedores",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/METRO MARFIL.jpg",
+      featured: true,
+
+      fabricIds: [
+      "metro-aqua",
+      "metro-camel",
+      "metro-hielo",
+      "metro-marfil",
+      ],
+
+      fabricImages: {
+      "metro-aqua": "/images/products/comedor-nordic/METRO AQUA.jpg",
+      "metro-camel": "/images/products/comedor-nordic/METRO CAMEL.jpg",
+      "metro-hielo": "/images/products/comedor-nordic/METRO HIELO.jpg",
+      "metro-marfil": "/images/products/comedor-nordic/METRO MARFIL.jpg",
+      },
+    },
+    {
+      id: "sofa-oasis",
+      name: "Sofá Oasis",
+      category: "salas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/PRADERA CRUDO.jpg",
+      featured: true,
+
+      fabricIds: [
+      "pradera-arcilla",
+      "pradera-chocolate",
+      "pradera-verde",
+      "pradera-crudo",
+      ],
+
+      fabricImages: {
+      "pradera-arcilla": "/images/products/sofa-oasis/PRADERA ARCILLA.jpg",
+      "pradera-chocolate": "/images/products/sofa-oasis/PRADERA CHOCOLATE.jpg",
+      "pradera-verde": "/images/products/sofa-oasis/PRADERA VERDE.jpg",
+      "pradera-crudo": "/images/products/sofa-oasis/PRADERA CRUDO.jpg",
+      },
+    },
+    {
+      id: "poltrona-baby-panda",
+      name: "Poltrona Baby Panda",
+      category: "poltronas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/PRADERA ARENA.jpg",
+      featured: true,
+
+      fabricIds: [
+      "pradera-arena",
+      "sensei-rojo",
+      "pradera-aluminio",
+      "pradera-plata"
+      ],
+
+      fabricImages: {
+      "pradera-aluminio": "/images/products/poltrona-baby-panda/PRADERA ALUMINIO.jpg",
+      "pradera-arena": "/images/products/poltrona-baby-panda/PRADERA ARENA.jpg",
+      "pradera-plata": "/images/products/poltrona-baby-panda/PRADERA PLATA.jpg",
+      "sensei-rojo": "/images/products/poltrona-baby-panda/SENSEI ROJO.jpg",
+      },
+    },
+    {
+      id: "sofa-lounge",
+      name: "Sofá Lounge",
+      category: "salas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/PRADERA MARFIL.jpg",
+      featured: true,
+
+      fabricIds: [
+      "pradera-marfil",
+      "sensei-gris",
+      "sensei-negro",
+      "sensei-palorosa"
+      ],
+
+      fabricImages: {
+      "pradera-marfil": "/images/products/sofa-lounge/PRADERA MARFIL.jpg",
+      "sensei-gris": "/images/products/sofa-lounge/SENSEI GRIS.jpg",
+      "sensei-negro": "/images/products/sofa-lounge/SENSEI NEGRO.jpg",
+      "sensei-palorosa": "/images/products/sofa-lounge/SENSEI PALO ROSA.jpg",
+      },
+    },
+    {
+      id: "basecama-secreto",
+      name: "Basecama Secreto",
+      category: "base-camas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/SENSEI MARFIL.jpg",
+      featured: true,
+
+      fabricIds: [
+      "sensei-marfil",
+      "sensei-camel",
+      "sensei-cocoa",
+      "sensei-beige"
+      ],
+
+      fabricImages: {
+      "sensei-marfil": "/images/products/basecama-secreto/SENSEI MARFIL.jpg",
+      "sensei-camel": "/images/products/basecama-secreto/SENSEI CAMEL.jpg",
+      "sensei-cocoa": "/images/products/basecama-secreto/SENSEI COCOA.jpg",
+      "sensei-beige": "/images/products/basecama-secreto/SENSEI BEIGE.jpg",
+      },
+    },
+    {
+      id: "poltrona-mufasa",
+      name: "Poltrona Mufasa",
+      category: "poltronas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/EGO MARFIL.jpg",
+      featured: true,
+
+      fabricIds: [
+      "ego-marfil",
+      "ego-beige",
+      "ego-almendra",
+      "gema-negro"
+      ],
+
+      fabricImages: {
+      "ego-marfil": "/images/products/poltrona-mufasa/EGO MARFIL.jpg",
+      "ego-beige": "/images/products/poltrona-mufasa/EGO BEIGE.jpg",
+      "ego-almendra": "/images/products/poltrona-mufasa/EGO ALMENDRA.jpg",
+      "gema-negro": "/images/products/poltrona-mufasa/GEMA NEGRO.jpg",
+      },
+    },
+    {
+      id: "sofa-versalles",
+      name: "Sofá Cama Versalles",
+      category: "salas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/EGO PLATA.jpg",
+      featured: true,
+
+      fabricIds: [
+      "ego-aluminio",
+      "ego-rosa",
+      "ego-plata",
+      "ego-taupe"
+      ],
+
+      fabricImages: {
+      "ego-aluminio": "/images/products/sofa-versalles/EGO ALUMINIO.jpg",
+      "ego-rosa": "/images/products/sofa-versalles/EGO ROSA.jpg",
+      "ego-plata": "/images/products/sofa-versalles/EGO PLATA.jpg",
+      "ego-taupe": "/images/products/sofa-versalles/EGO TAUPE.jpg",
+      },
+    },
+    {
+      id: "sofa-bellagio",
+      name: "Sofá Bellagio",
+      category: "salas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/SUSSY HOME 1700.jpg",
+      featured: true,
+
+      fabricIds: [
+      "ego-gris",
+      "ego-verde",
+      "sussyhome-1700",
+      "sussyhome-1630"
+      ],
+
+      fabricImages: {
+      "ego-gris": "/images/products/sofa-bellagio/EGO GRIS.jpg",
+      "ego-verde": "/images/products/sofa-bellagio/EGO VERDE.jpg",
+      "sussyhome-1700": "/images/products/sofa-bellagio/SUSSY HOME 1700.jpg",
+      "sussyhome-1630": "/images/products/sofa-bellagio/SUSSY HOME 1630.jpg",
+      },
+    },
+    {
+      id: "poltrona-tulipan",
+      name: "Poltrona Tulipán",
+      category: "poltronas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/SUSSY HOME 1650.jpg",
+      featured: true,
+
+      fabricIds: [
+      "sussyhome-1620",
+      "sussyhome-1650",
+      "sussyhome-7350",
+      "sussyhome-9600"
+      ],
+
+      fabricImages: {
+      "sussyhome-1620": "/images/products/poltrona-tulipan/SUSSY HOME 1620.jpg",
+      "sussyhome-1650": "/images/products/poltrona-tulipan/SUSSY HOME 1650.jpg",
+      "sussyhome-7350": "/images/products/poltrona-tulipan/SUSSY HOME 7350.jpg",
+      "sussyhome-9600": "/images/products/poltrona-tulipan/SUSSY HOME 9600.jpg",
+      },
+    },
+    {
+      id: "sofa-chesterfield",
+      name: "Sofá Chesterfield",
+      category: "salas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/CRACK MARFIL.jpg",
+      featured: true,
+
+      fabricIds: [
+      "sussyhome-0020",
+      "sussyhome-0060",
+      "crack-marfil",
+      "crack-beige"
+      ],
+
+      fabricImages: {
+      "sussyhome-0020": "/images/products/sofa-chesterfield/SUSSY HOME 0020.jpg",
+      "sussyhome-0060": "/images/products/sofa-chesterfield/SUSSY HOME 0060.jpg",
+      "crack-marfil": "/images/products/sofa-chesterfield/CRACK MARFIL.jpg",
+      "crack-beige": "/images/products/sofa-chesterfield/CRACK BEIGE.jpg",
+      },
+    },
+    {
+      id: "sofacama-urban",
+      name: "Sofá Cama Urban",
+      category: "salas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/CRACK INDIGO.jpg",
+      featured: true,
+
+      fabricIds: [
+      "crack-camel",
+      "crack-cocoa",
+      "crack-indigo",
+      "crack-palorosa"
+      ],
+
+      fabricImages: {
+      "crack-camel": "/images/products/sofa-urban/CRACK CAMEL.jpg",
+      "crack-cocoa": "/images/products/sofa-urban/CRACK COCOA.jpg",
+      "crack-indigo": "/images/products/sofa-urban/CRACK INDIGO.jpg",
+      "crack-palorosa": "/images/products/sofa-urban/CRACK PALO ROSA.jpg",
+      },
+    },
+    {
+      id: "poltrona-trompa",
+      name: "Poltrona Trompa",
+      category: "poltronas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/CRACK PLATA.png",
+      featured: true,
+
+      fabricIds: [
+      "crack-aluminio",
+      "crack-carbon",
+      "crack-plata",
+      "gema-hielo"
+      ],
+
+      fabricImages: {
+      "crack-aluminio": "/images/products/poltrona-trompa/CRACK ALUMINIO.png",
+      "crack-carbon": "/images/products/poltrona-trompa/CRACK CARBON.png",
+      "crack-plata": "/images/products/poltrona-trompa/CRACK PLATA.png",
+      "gema-hielo": "/images/products/poltrona-trompa/GEMAHIELO.png",
+      },
+    },
+    {
+      id: "poltrona-curve",
+      name: "Poltrona Curve",
+      category: "poltronas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/MONUMENTAL SAND.png",
+      featured: true,
+
+      fabricIds: [
+      "monumental-beige",
+      "monumental-jade",
+      "monumental-rosa",
+      "monumental-sand",
+      ],
+
+      fabricImages: {
+      "monumental-beige": "/images/products/poltrona-curve/MONUMENTAL BEIGE.png",
+      "monumental-jade": "/images/products/poltrona-curve/MONUMENTAL JADE.png",
+      "monumental-rosa": "/images/products/poltrona-curve/MONUMENTAL ROSA.png",
+      "monumental-sand": "/images/products/poltrona-curve/MONUMENTAL SAND.png",
+      },
+    },
+    {
+      id: "poltrona-orbit",
+      name: "Poltrona Orbit",
+      category: "poltronas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/MONUMENTALHIELO.png",
+      featured: true,
+
+      fabricIds: [
+      "monumental-hielo",
+      "monumental-negro",
+      "monumental-plata",
+      "monumental-plomo",
+      ],
+
+      fabricImages: {
+      "monumental-hielo": "/images/products/poltrona-orbit/MONUMENTALHIELO.png",
+      "monumental-negro": "/images/products/poltrona-orbit/MONUMENTAL NEGRO.png",
+      "monumental-plata": "/images/products/poltrona-orbit/MONUMENTAL PLATA.png",
+      "monumental-plomo": "/images/products/poltrona-orbit/MONUMENTAL PLOMO.png",
+      },
+    },
+    {
+      id: "puff-velvet",
+      name: "Puff Velvet",
+      category: "puffs",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/VESPA BLANCO.png",
+      featured: true,
+
+      fabricIds: [
+      "monumental-petroleo",
+      "vespa-arena",
+      "vespa-blanco",
+      "vespa-crudo",
+      ],
+
+      fabricImages: {
+      "monumental-petroleo": "/images/products/puff-velvet/MONUMENTAL PETROLEO.png",
+      "vespa-arena": "/images/products/puff-velvet/VESPA ARENA.png",
+      "vespa-blanco": "/images/products/puff-velvet/VESPA BLANCO.png",
+      "vespa-crudo": "/images/products/puff-velvet/VESPA CRUDO.png",
+      },
+    },
+    {
+      id: "sofa-petite",
+      name: "Sofa Petite",
+      category: "salas",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/DORSET CREMA.png",
+      featured: true,
+
+      fabricIds: [
+      "dorset-crema",
+      "vespa-gris",
+      "vespa-nuez",
+      "vespa-plata",
+      ],
+
+      fabricImages: {
+      "dorset-crema": "/images/products/sofa-petite/DORSET CREMA.png",
+      "vespa-gris": "/images/products/sofa-petite/VESPA GRIS.png",
+      "vespa-nuez": "/images/products/sofa-petite/VESPA NUEZ.png",
+      "vespa-plata": "/images/products/sofa-petite/VESPA PLATA.png",
+      },
+    },
+    {
+      id: "silla-chrome",
+      name: "Silla Chrome",
+      category: "sillas-de-escritorio",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/LUCERO CRUDO.png",
+      featured: true,
+
+      fabricIds: [
+      "lucero-crudo",
+      "lucero-sand",
+      "lucero-taupe",
+      "zagori-humo",
+      ],
+
+      fabricImages: {
+      "lucero-crudo": "/images/products/silla-chrome/LUCERO CRUDO.png",
+      "lucero-sand": "/images/products/silla-chrome/LUCERO SAND.png",
+      "lucero-taupe": "/images/products/silla-chrome/LUCERO TAUPE.png",
+      "zagori-humo": "/images/products/silla-chrome/ZAGORI 904 HUMO.png",
+      },
+    },
+    {
+      id: "comedor-zenit",
+      name: "Comedro Zenit",
+      category: "comedores",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/ZAGORI PLATA.png",
+      featured: true,
+
+      fabricIds: [
+      "zagori-azul",
+      "zagori-nuez",
+      "zagori-plata",
+      "zagori-orquidea",
+      ],
+
+      fabricImages: {
+      "zagori-azul": "/images/products/comedor-zenit/ZAGORI AZUL.png",
+      "zagori-nuez": "/images/products/comedor-zenit/ZAGORI NUEZ.png",
+      "zagori-plata": "/images/products/comedor-zenit/ZAGORI PLATA.png",
+      "zagori-orquidea": "/images/products/comedor-zenit/ZAGORI ORQUIDEA.png",
+      },
+    },
+    {
+      id: "escritorio-atenas",
+      name: "Escritorio Atenas",
+      category: "escritorios",
+      description:
+        "Butacas de diseño contemporáneo, pensadas para brindar comodidad, funcionalidad y estilo a tus espacios.",
+      image: "/images/products/ESCRITORIO ATENAS.png",
+      featured: true,
+
+      woodIds: [
+      "madera-escritorios",
+      ],
+
+      woodImages: {
+      "madera-escritorios": "/images/products/ESCRITORIO ATENAS.png",
+      },
+    },
 ];
